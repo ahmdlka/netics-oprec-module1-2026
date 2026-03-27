@@ -1,9 +1,7 @@
-# netics-oprec-module1-2026
-
 # Penugasan Modul 1 - Open Recruitment NETICS 2026
-**Author        :** Ahmad Loka Arziki 
-**NRP           :** 5025241044 
-**URL API       :** http://vps-netics.koreacentral.cloudapp.azure.com/health  
+**Author        :** Ahmad Loka Arziki
+**NRP           :** 5025241044
+**URL API       :** http://vps-netics.koreacentral.cloudapp.azure.com/health
 **Docker Image  :** https://hub.docker.com/r/ahmdlka/api-app
 
 ---
