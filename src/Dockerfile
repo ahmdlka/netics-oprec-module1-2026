@@ -8,11 +8,14 @@ RUN go mod download
 # Copy source code
 COPY . .
 # Build the application
-RUN go build -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 # Use a minimal base image for final deployment
 FROM alpine:latest
 # Set working directory in the container
 WORKDIR /app
+# Add non-root user
+RUN adduser -D myuser
+USER myuser
 # Copy the built binary from the builder stage
 COPY --from=builder /build/main .
 # Expose the application port
