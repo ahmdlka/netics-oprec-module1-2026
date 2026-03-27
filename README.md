@@ -1,15 +1,15 @@
 # netics-oprec-module1-2026
 
 # Penugasan Modul 1 - Open Recruitment NETICS 2026
-**Author:** Ahmad Loka Arziki 
-**NRP:** 5025241044 
-**URL API:** http://vps-netics.koreacentral.cloudapp.azure.com/health  
-**Docker Image:** https://hub.docker.com/r/ahmdlka/api-app
+**Author        :** Ahmad Loka Arziki 
+**NRP           :** 5025241044 
+**URL API       :** http://vps-netics.koreacentral.cloudapp.azure.com/health  
+**Docker Image  :** https://hub.docker.com/r/ahmdlka/api-app
 
 ---
 
 ## 1. Deskripsi Proyek
-Proyek ini merupakan implementasi CI/CD untuk aplikasi API sederhana berbasis Go (Golang) yang dideploy menggunakan Docker di VPS publik. Infrastruktur dikelola menggunakan Ansible sebagai konfigurasi manajemen (Reverse Proxy Nginx) dan GitHub Actions untuk otomatisasi deployment.
+Penugasan ini merupakan implementasi CI/CD untuk aplikasi API sederhana (saya memilih golang) yang dideploy menggunakan Docker di VPS publik. Infrastruktur dikelola menggunakan Ansible sebagai konfigurasi manajemen (Reverse Proxy Nginx) dan GitHub Actions untuk otomatisasi deployment.
 
 ## 2. Struktur Direktori
 Berdasarkan pengembangan, berikut adalah struktur utama repositori ini:
