@@ -1,0 +1,35 @@
+---
+- name: Setup Nginx as Reverse Proxy
+  hosts: all
+  become: yes
+  
+  vars:
+    app_port: 8080 
+
+  tasks:
+    - name: install nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: copy the nginx config file
+      ansible.builtin.template:
+        src: ./nginx.config
+        dest: /etc/nginx/sites-available/api_proxy
+
+    - name: remove default nginx config
+      ansible.builtin.file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: create symlink
+      ansible.builtin.file:
+        src: /etc/nginx/sites-available/api_proxy
+        dest: /etc/nginx/sites-enabled/api_proxy
+        state: link
+
+    - name: restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
