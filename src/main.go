@@ -21,7 +21,7 @@ func getHealth(c *gin.Context) {
 	c.JSON(
 		http.StatusOK,
 		gin.H{
-			"nama":      "Ahmad Loka Arziki",
+			"nama":      "Ricardo Supriyanto",
 			"nrp":       "5025241044",
 			"status":    "UP",
 			"timestamp": time.Now().Format(time.RFC3339),
